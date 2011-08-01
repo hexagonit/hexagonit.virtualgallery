@@ -1,0 +1,6 @@
+<layers>
+  <layer
+      name="hexagonit.virtualgallery"
+      interface="hexagonit.virtualgallery.browser.interfaces.IHexagonitVirtualgalleryLayer"
+      />
+</layers>
