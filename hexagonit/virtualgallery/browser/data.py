@@ -1,3 +1,5 @@
+from Products.CMFCore.utils import getToolByName
+from plone.app.contentlisting.interfaces import IContentListing
 from Products.Five.browser import BrowserView
 
 import json
@@ -48,8 +50,8 @@ class TopicJSON(BrowserView):
     """A BrowserView to generate Virtual Gallery JSON data for collections."""
 
     def __call__(self):
-        items = self.context.restrictedTraverse('@@folderListing')()
+        catalog = getToolByName(self.context, 'portal_catalog')
+        query = self.context.buildQuery()
+        brains = catalog(query)
+        items = IContentListing(brains)
         return jsonize(items)
-
-
-
