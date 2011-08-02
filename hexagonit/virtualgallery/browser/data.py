@@ -43,6 +43,7 @@ class FolderJSON(BrowserView):
 
     def __call__(self):
         items = self.context.restrictedTraverse('@@folderListing')()
+        self.context.RESPONSE.setHeader('Content-Type', 'application/json')
         return jsonize(items)
 
 
