@@ -1,20 +1,19 @@
-from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 GALLERYINIT = """
 var flashvars = {
-	dataURL:"%(context_url)s/@@virtualgallery.json"
+    dataURL:"%(context_url)s/@@virtualgallery.json"
 };
 var params = {
-	menu: "false",
-	scale: "noScale",
-	allowFullscreen: "true",
-	allowScriptAccess: "always",
-	bgcolor: "#FFFFFF"
+    menu: "false",
+    scale: "noScale",
+    allowFullscreen: "true",
+    allowScriptAccess: "always",
+    bgcolor: "#FFFFFF"
 };
 var attributes = {
-	id:"Virtual3DGallery"
+    id:"Virtual3DGallery"
 };
 swfobject.embedSWF(
 "%(portal_url)s/++resource++hexagonit.virtualgallery/Virtual3DGallery.swf",
@@ -40,4 +39,3 @@ class VirtualGalleryView(BrowserView):
             context_url=self.context.absolute_url(),
             portal_url=self.context.portal_url(),
          )
-

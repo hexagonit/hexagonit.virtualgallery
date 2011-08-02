@@ -1,4 +1,3 @@
-from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 
 import json
@@ -26,12 +25,12 @@ def jsonize(items):
             loadingImg="loading image:",
             spaceToEnterRoom="press space to enter",
             spaceToCloseUp="press space to zoom in",
-		    enterRoom="You entering room no [x] of [y]",
-		    enterRoomToolTip="Enter [x] room",
-		    roomName="Room [x]",
+            enterRoom="You entering room no [x] of [y]",
+            enterRoomToolTip="Enter [x] room",
+            roomName="Room [x]",
         ),
-	    "settings": dict(
-		    anaglyphModeEnabled="true",
+        "settings": dict(
+            anaglyphModeEnabled="true",
         ),
         "images": images,
     })
