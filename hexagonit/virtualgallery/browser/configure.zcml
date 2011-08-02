@@ -1,8 +1,15 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zope="http://namespaces.zope.org/zope"
     i18n_domain="hexagonit.virtualgallery">
 
+
+  <!-- Publish directory containing static media files -->
+  <browser:resourceDirectory
+    name="hexagonit.virtualgallery"
+    directory="resources"
+    />
 
   <!-- Apply IVirtualGalleryEnabled marker interface to default content-types -->
   <class class="Products.ATContentTypes.content.folder.ATFolder">
