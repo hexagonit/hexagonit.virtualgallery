@@ -3,10 +3,19 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="hexagonit.virtualgallery">
 
+
+  <!-- Apply IVirtualGalleryEnabled marker interface to default content-types -->
+  <class class="Products.ATContentTypes.content.folder.ATFolder">
+    <implements interface="..interfaces.IVirtualgalleryEnabled" />
+  </class>
+  <class class="Products.ATContentTypes.content.topic.ATTopic">
+    <implements interface="..interfaces.IVirtualgalleryEnabled" />
+  </class> 
+
   <browser:page
-    name="demo"
-    for="*"
-    class=".template.DemoView"
+    name="virtualgallery"
+    for="..interfaces.IVirtualgalleryEnabled"
+    class=".gallery.VirtualGalleryView"
     permission="zope2.View"
     layer=".interfaces.IHexagonitVirtualgalleryLayer"
     />
