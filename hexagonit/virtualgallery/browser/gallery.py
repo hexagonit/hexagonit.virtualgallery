@@ -2,15 +2,42 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
+GALLERYINIT = """
+var flashvars = {
+	dataURL:"%(context_url)s/@@virtualgallery.json"
+};
+var params = {
+	menu: "false",
+	scale: "noScale",
+	allowFullscreen: "true",
+	allowScriptAccess: "always",
+	bgcolor: "#FFFFFF"
+};
+var attributes = {
+	id:"Virtual3DGallery"
+};
+swfobject.embedSWF(
+"%(portal_url)s/++resource++hexagonit.virtualgallery/Virtual3DGallery.swf",
+"altContent", "100%%", "100%%", "10.0.0",
+"%(portal_url)s/++resource++hexagonit.virtualgallery/expressInstall.swf",
+flashvars, params, attributes);
+"""
+
 
 class VirtualGalleryView(BrowserView):
     """A BrowserView to display the Virtual 3D gallery."""
     template = ViewPageTemplateFile('gallery.pt')
 
     def __call__(self):
-        if 'json_data' in self.request.keys():
-            return self.json_data()
         return self.template()
-    
-    def json_data(self):
-        return "bar"
+
+    def swfobject_url(self):
+        return self.context.portal_url() + \
+               "/++resource++hexagonit.virtualgallery/swfobject.js"
+
+    def galleryinit(self):
+        return GALLERYINIT % dict(
+            context_url=self.context.absolute_url(),
+            portal_url=self.context.portal_url(),
+         )
+

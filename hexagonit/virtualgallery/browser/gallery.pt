@@ -1,25 +1,31 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      lang="en"
-      metal:use-macro="context/main_template/macros/master"
-      i18n:domain="hexagonit.virtualgallery">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Virtual 3D Gallery</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	<script src="swfobject.js" type="text/javascript"
+            tal:attributes="src view/swfobject_url"></script>
+
+    <script type="text/javascript" charset="utf-8"
+            tal:content="view/galleryinit"></script>
+
+	<style type="text/css">
+		html, body { height:100%; overflow:hidden; }
+		body { margin:0; }
+	</style>
+</head>
 <body>
+	<div id="altContent">
+		<h1>Plon3DGallery</h1>
+		<p>Alternative content</p>
+		<p><a href="http://www.adobe.com/go/getflashplayer"><img 
+			src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" 
+			alt="Get Adobe Flash player" /></a></p>
 
-  <metal:block fill-slot="top_slot"
-    tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
-                disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
-
-  <metal:content-core fill-slot="content-core">
-    <metal:content-core define-macro="content-core">
- 
-      foo
-        
-    </metal:content-core>
-  </metal:content-core>
-
-
+	</div>
 </body>
 </html>
-

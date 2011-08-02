@@ -27,4 +27,20 @@
     layer=".interfaces.IHexagonitVirtualgalleryLayer"
     />
 
+  <browser:page
+    name="virtualgallery.json"
+    for="Products.ATContentTypes.content.folder.ATFolder"
+    class=".data.FolderJSON"
+    permission="zope2.View"
+    layer=".interfaces.IHexagonitVirtualgalleryLayer"
+    />
+
+  <browser:page
+    name="virtualgallery.json"
+    for="Products.ATContentTypes.content.topic.ATTopic"
+    class=".data.TopicJSON"
+    permission="zope2.View"
+    layer=".interfaces.IHexagonitVirtualgalleryLayer"
+    />
+
 </configure>
