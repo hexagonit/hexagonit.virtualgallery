@@ -42,8 +42,15 @@ class FolderJSON(BrowserView):
     """A BrowserView to generate Virtual Gallery JSON data for folders."""
 
     def __call__(self):
+        # get contents of this Folder
         items = self.context.restrictedTraverse('@@folderListing')()
-        self.context.RESPONSE.setHeader('Content-Type', 'application/json')
+
+        # filter out non-image objects
+        image_types = getToolByName(self.context, 'portal_tinymce').imageobjects
+        items = [item for item in items if item.Type() in image_types]
+
+        # response
+        self.request.RESPONSE.setHeader('Content-Type', 'application/json')
         return jsonize(items)
 
 
@@ -51,8 +58,18 @@ class TopicJSON(BrowserView):
     """A BrowserView to generate Virtual Gallery JSON data for collections."""
 
     def __call__(self):
+        # get result items of this Collection
         catalog = getToolByName(self.context, 'portal_catalog')
         query = self.context.buildQuery()
         brains = catalog(query)
+
+        # convert catalog brains into plone.app.contentlisting items
         items = IContentListing(brains)
+
+        # filter out non-image objects
+        image_types = getToolByName(self.context, 'portal_tinymce').imageobjects
+        items = [item for item in items if item.Type() in image_types]
+
+        # response
+        self.request.RESPONSE.setHeader('Content-Type', 'application/json')
         return jsonize(items)
