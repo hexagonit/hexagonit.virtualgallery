@@ -1,9 +1,11 @@
 from hexagonit.virtualgallery.tests.base import FUNCTIONAL_TESTING
-from leo.testing.browser import Browser
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from plone.app.testing import TEST_USER_NAME
+from plone.app.testing import TEST_USER_PASSWORD
 from plone.testing import layered
 from zope.testing import renormalizing
+from plone.testing.z2 import Browser
 
 import doctest
 import manuel.codeblock
@@ -26,14 +28,16 @@ def setUp(self):
     # Update global variables within the tests.
     self.globs.update({
         'portal': layer['portal'],
-        'portal_url': layer['portal'].absolute_url(),
         'browser': Browser(layer['app']),
+        'TEST_USER_NAME': TEST_USER_NAME,
+        'TEST_USER_PASSWORD': TEST_USER_PASSWORD,
+        'PNG_IMAGE': ('\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00'
+                     '\x01\x01\x00\x00\x00\x007n\xf9$\x00\x00\x00\nIDATx\x9cc`\x00\x00'
+                     '\x00\x02\x00\x01H\xaf\xa4q\x00\x00\x00\x00IEND\xaeB`\x82')
     })
 
     portal = self.globs['portal']
     browser = self.globs['browser']
-    portal_url = self.globs['portal_url']
-    browser.setBaseUrl(portal_url)
 
     browser.handleErrors = True
     portal.error_log._ignored_exceptions = ()

@@ -36,7 +36,7 @@ class TestCase(IntegrationTestCase):
     def test_marker_interface(self):
         """Test that Folder and Collection provides IVirtualGalleryEnabled
         marker interface."""
-        from hexagonit.virtualgallery.interfaces import IVirtualgalleryEnabled
+        from hexagonit.virtualgallery.browser.interfaces import IVirtualgalleryEnabled
         self.assertTrue(IVirtualgalleryEnabled in providedBy(self.portal.folder))
         self.assertTrue(IVirtualgalleryEnabled in providedBy(self.portal.collection))
     

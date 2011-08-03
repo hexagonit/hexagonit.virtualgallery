@@ -1,0 +1,79 @@
+User story
+==========
+
+A scripted walk-through of basic features of hexagonit.virtualgallery.
+
+Prepare
+-------
+
+We'll start by importing what we need and adding a Folder so we can later
+add images to it.
+
+    >>> from StringIO import StringIO
+    >>> foo = portal.invokeFactory('Folder', 'gallery')
+    >>> import transaction; transaction.commit()
+
+Now, let's login so we can later use the `Add new ...` drop-down menu and start
+adding an Image.
+
+    Go to login screen.
+    >>> browser.open(portal.absolute_url() + '/login')
+
+    Fill in your credentials.
+    >>> browser.getControl(name='__ac_name').value = TEST_USER_NAME
+    >>> browser.getControl(name='__ac_password').value = TEST_USER_PASSWORD
+
+    Click Login button.
+    >>> browser.getControl(name='submit').click()
+
+    Are we logged in?
+    >>> "You are now logged in" in browser.contents
+    True
+
+
+Add an Image
+---------------
+
+Let's now add an Image, to our Folder.
+
+    Click on the add link to open the form for adding an Image.
+    >>> browser.open(portal.gallery.absolute_url())
+    >>> browser.getLink(id='image').click()
+
+    Fill in fields.
+    >>> browser.getControl(name='title').value = "Image"
+    >>> browser.getControl(name='image_file').add_file(StringIO(PNG_IMAGE), 'image/png', 'image.png')
+
+    Click submit to create the Image.
+    >>> browser.getControl(name='form.button.save').click()
+
+    Was our Image really created?
+    >>> 'Changes saved' in browser.contents
+    True
+    >>> hasattr(portal.gallery, 'image')
+    True
+
+
+Set Folder's display view to 'virtualgallery'
+---------------------------------------------
+
+
+    Verify that we have the link to display view.
+    >>> browser.open(portal.gallery.absolute_url())
+    >>> browser.getLink(id='virtualgallery').url.endswith("selectViewTemplate?templateId=virtualgallery")
+    True
+
+    Click to set display view.
+    >>> browser.getLink(id='virtualgallery').click()
+    >>> 'View changed' in browser.contents
+    True
+
+    Check that gallery JavaScripts and divs are present in HTML
+    >>> '++resource++hexagonit.virtualgallery/swfobject.js' in browser.contents
+    True
+    >>> 'dataURL:"http://nohost/plone/gallery/@@virtualgallery.json"' in browser.contents
+    True
+    >>> '<div id="virtualgallery-wrapper">' in browser.contents
+    True
+    >>> '<div id="altContent">' in browser.contents
+    True
