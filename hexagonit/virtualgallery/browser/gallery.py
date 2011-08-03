@@ -15,11 +15,16 @@ var params = {
 var attributes = {
     id:"Virtual3DGallery"
 };
+
+function callbackFn(e) {
+    $("#virtualgallery-wrapper").height($("#virtualgallery-wrapper").width() / 2.5);
+}
+
 swfobject.embedSWF(
 "%(portal_url)s/++resource++hexagonit.virtualgallery/Virtual3DGallery.swf",
 "altContent", "100%%", "100%%", "10.0.0",
 "%(portal_url)s/++resource++hexagonit.virtualgallery/expressInstall.swf",
-flashvars, params, attributes);
+flashvars, params, attributes, callbackFn);
 """
 
 

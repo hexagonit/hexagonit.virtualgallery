@@ -1,31 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="hexagonit.virtualgallery"
+      tal:omit-tag="">
 <head>
-	<title>Virtual 3D Gallery</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	
-	<script src="swfobject.js" type="text/javascript"
+    <metal:block metal:fill-slot="head_slot">
+    	<script src="swfobject.js" type="text/javascript"
             tal:attributes="src view/swfobject_url"></script>
-
-    <script type="text/javascript" charset="utf-8"
-            tal:content="view/galleryinit"></script>
-
-	<style type="text/css">
-		html, body { height:100%; overflow:hidden; }
-		body { margin:0; }
-	</style>
+        <script type="text/javascript" charset="utf-8"
+                tal:content="view/galleryinit"></script>
+    </metal:block>
 </head>
-<body>
-	<div id="altContent">
-		<h1>Plon3DGallery</h1>
-		<p>Alternative content</p>
-		<p><a href="http://www.adobe.com/go/getflashplayer"><img 
-			src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" 
-			alt="Get Adobe Flash player" /></a></p>
 
-	</div>
+<body>
+    <metal:content-core fill-slot="content-core">
+        <metal:content-core define-macro="content-core">
+            <div id="virtualgallery-wrapper">
+                <div id="altContent">
+                    <p><a href="http://www.adobe.com/go/getflashplayer"><img
+                           src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+                           alt="Get Adobe Flash player" /></a>
+                    </p>
+                </div>
+            </div>
+        </metal:content-core>
+    </metal:content-core>
 </body>
 </html>
