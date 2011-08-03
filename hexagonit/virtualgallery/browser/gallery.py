@@ -2,6 +2,7 @@ from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 GALLERYINIT = """
+jQuery(function () { 
 var flashvars = {
     dataURL:"%(context_url)s/@@virtualgallery.json"
 };
@@ -15,16 +16,15 @@ var params = {
 var attributes = {
     id:"Virtual3DGallery"
 };
-
 function callbackFn(e) {
     $("#virtualgallery-wrapper").height($("#virtualgallery-wrapper").width() / 2.5);
 }
-
 swfobject.embedSWF(
 "%(portal_url)s/++resource++hexagonit.virtualgallery/Virtual3DGallery.swf",
 "altContent", "100%%", "100%%", "10.0.0",
 "%(portal_url)s/++resource++hexagonit.virtualgallery/expressInstall.swf",
 flashvars, params, attributes, callbackFn);
+});
 """
 
 
