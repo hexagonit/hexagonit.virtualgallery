@@ -14,22 +14,22 @@
 
   <!-- Apply IVirtualGalleryEnabled marker interface to default content-types -->
   <class class="Products.ATContentTypes.content.folder.ATFolder">
-    <implements interface="..interfaces.IVirtualgalleryEnabled" />
+    <implements interface=".interfaces.IVirtualgalleryEnabled" />
   </class>
   <class class="Products.ATContentTypes.content.topic.ATTopic">
-    <implements interface="..interfaces.IVirtualgalleryEnabled" />
+    <implements interface=".interfaces.IVirtualgalleryEnabled" />
   </class> 
 
   <browser:page
     name="virtualgallery"
-    for="..interfaces.IVirtualgalleryEnabled"
+    for=".interfaces.IVirtualgalleryEnabled"
     class=".gallery.VirtualGalleryView"
     permission="zope2.View"
     layer=".interfaces.IHexagonitVirtualgalleryLayer"
     />
 
   <browser:menuItem
-    for="..interfaces.IVirtualgalleryEnabled"
+    for=".interfaces.IVirtualgalleryEnabled"
     menu="plone_displayviews"
     title="Virtual 3D gallery view"
     action="@@virtualgallery"
