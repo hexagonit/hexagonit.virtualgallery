@@ -7,6 +7,8 @@
 
   <five:registerPackage package="." initialize=".initialize" />
 
+  <include package=".browser" />
+
   <genericsetup:registerProfile
       name="default"
       title="hexagonit.virtualgallery"
@@ -14,7 +16,5 @@
       description="Installs the hexagonit.virtualgallery package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-
-  <include package=".browser" />
 
 </configure>
