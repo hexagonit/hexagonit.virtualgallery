@@ -42,7 +42,7 @@ class TestCase(IntegrationTestCase):
         from hexagonit.virtualgallery.browser.interfaces import IVirtualgalleryEnabled
         self.assertTrue(IVirtualgalleryEnabled in providedBy(self.portal.folder))
         self.assertTrue(IVirtualgalleryEnabled in providedBy(self.portal.collection))
-    
+
     # Folder.xml
     # Topic.xml
     def test_display_mode(self):
