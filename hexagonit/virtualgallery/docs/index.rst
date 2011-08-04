@@ -1,7 +1,8 @@
-Github readme file test
-=======================
-
+.. include:: README.rst
 .. include:: FUTURE.rst
+.. include:: CREDITS.rst
+.. include:: HISTORY.rst
+.. include:: LICENSE.rst
 
 Indices and tables
 ==================
