@@ -1,1 +1,1 @@
-hexagonit/virtualgallery/docs/index.rst
+hexagonit/virtualgallery/docs/README.rst
