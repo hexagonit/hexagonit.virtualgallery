@@ -4,9 +4,8 @@
     xmlns:zope="http://namespaces.zope.org/zope"
     i18n_domain="hexagonit.virtualgallery">
 
-  <include package="plone.app.contentmenu" />
 
-  <!-- Publish directory containing static media files -->
+  <!-- Publish static media files -->
   <browser:resourceDirectory
     name="hexagonit.virtualgallery"
     directory="resources"
@@ -20,6 +19,7 @@
     <implements interface=".interfaces.IVirtualgalleryEnabled" />
   </class> 
 
+  <!-- This is the view that renders our virtual 3D gallery -->
   <browser:page
     name="virtualgallery"
     for=".interfaces.IVirtualgalleryEnabled"
@@ -28,6 +28,8 @@
     layer=".interfaces.IHexagonitVirtualgalleryLayer"
     />
 
+  <!-- Add a 'display' drop-down menu entry -->
+  <include package="plone.app.contentmenu" />
   <browser:menuItem
     for=".interfaces.IVirtualgalleryEnabled"
     menu="plone_displayviews"
@@ -36,6 +38,7 @@
     description="A Virtual 3D gallery of images in this item."
     />
 
+  <!-- Build json data for the gallery from Folder contents -->
   <browser:page
     name="virtualgallery.json"
     for="Products.ATContentTypes.content.folder.ATFolder"
@@ -44,6 +47,7 @@
     layer=".interfaces.IHexagonitVirtualgalleryLayer"
     />
 
+  <!-- Build json data for the gallery from Collection query results -->
   <browser:page
     name="virtualgallery.json"
     for="Products.ATContentTypes.content.topic.ATTopic"
