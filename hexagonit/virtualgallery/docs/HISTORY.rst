@@ -1,7 +1,8 @@
 Changelog
 =========
 
-0.1 (XXXX-XX-XX)
+1.0b1 (2011-08-04)
 ----------------
 
-- Initial release
+- Initial release.
+  [zupo]
