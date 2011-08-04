@@ -10,7 +10,12 @@ def read(*rnames):
 version = read('hexagonit', 'virtualgallery', 'version.txt').strip()
 
 long_description = (
-    read('hexagonit', 'virtualgallery', 'docs', 'index.rst'))
+    read('hexagonit', 'virtualgallery', 'docs', 'README.rst') +
+    read('hexagonit', 'virtualgallery', 'docs', 'FUTURE.rst') +
+    read('hexagonit', 'virtualgallery', 'docs', 'CREDITS.rst') +
+    read('hexagonit', 'virtualgallery', 'docs', 'HISTORY.rst') +
+    read('hexagonit', 'virtualgallery', 'docs', 'LICENSE.rst'))
+
 
 setup(name='hexagonit.virtualgallery',
       version=version,
