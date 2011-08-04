@@ -25,7 +25,9 @@ class HexagonitVirtualgalleryLayer(PloneSandboxLayer):
         """Set up Zope."""
         # Load ZCML
         import hexagonit.virtualgallery
+        import plone.app.contentlisting
         self.loadZCML(package=hexagonit.virtualgallery)
+        self.loadZCML(package=plone.app.contentlisting)
         z2.installProduct(app, 'hexagonit.virtualgallery')
 
     def setUpPloneSite(self, portal):
