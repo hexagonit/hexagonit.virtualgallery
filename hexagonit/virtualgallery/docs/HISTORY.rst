@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0b2 (unreleased)
+1.0b2 (2011-08-04)
 ------------------
 
 - Code cleanups.
