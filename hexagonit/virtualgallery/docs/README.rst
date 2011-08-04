@@ -2,7 +2,7 @@
 Virtual 3D gallery for Plone
 ============================
 
-hexagonit.virtualgallery is a Plone add-on that renders a Flash-based 3D virtual gallery.
+`hexagonit.virtualgallery` is a Plone add-on that renders a Flash-based 3D virtual gallery.
 
 * `Source code @ GitHub <http://github.com/hexagonit/hexagonit.virtualgallery>`_
 * `Releases @ PyPI <http://pypi.python.org/pypi/hexagonit.virtualgallery>`_
@@ -11,7 +11,7 @@ hexagonit.virtualgallery is a Plone add-on that renders a Flash-based 3D virtual
 Installation
 ============
 
-To install hexagonit.virtualgallery you simply add "hexagonit.virtualgallery" to the list of eggs in your buildout, run buildout and restart Plone. Then, install "hexagonit.virtualgallery" using the Add-ons control panel.
+To install `hexagonit.virtualgallery` you simply add ``hexagonit.virtualgallery`` to the list of eggs in your buildout, run buildout and restart Plone. Then, install `hexagonit.virtualgallery` using the Add-ons control panel.
 
 Usage
 =====
@@ -19,7 +19,7 @@ Usage
 Basic usage
 -----------
 
-This package adds the "Virtual 3D gallery" display mode to Folder and Collection. So, go to any folder or collection that contains images and select "Virtual 3D gallery" from the display drop-down menu. That's it!
+This package adds the `Virtual 3D gallery` display mode to Folder and Collection. So, go to any folder or collection that contains images and select ``Virtual 3D gallery`` from the display drop-down menu. That's it!
 
 AJAX usage
 ----------
