@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+"""Render and display the Virtual 3D gallery."""
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
