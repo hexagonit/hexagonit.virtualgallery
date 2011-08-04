@@ -1,17 +1,9 @@
 # -*- coding: utf-8 -*-
 """Tests for @@virtualgallery view that renders out Virtual 3D gallery."""
 
-import transaction
-
 import unittest2 as unittest
 
-from DateTime import DateTime
-
-from zope.component import getUtility
 from zope.interface import alsoProvides
-from zope.interface.verify import verifyObject
-from zope.testbrowser.interfaces import ILink
-from plone.testing.z2 import Browser
 
 from hexagonit.virtualgallery.tests.base import IntegrationTestCase
 

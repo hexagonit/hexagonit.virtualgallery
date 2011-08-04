@@ -1,23 +1,12 @@
 # -*- coding: utf-8 -*-
 """Tests for gallery JSON generation."""
 
-import transaction
-
 import unittest2 as unittest
 import json
 
-from DateTime import DateTime
-
-from validictory import validate
-
-from zope.component import getUtility
-from zope.interface import alsoProvides
-from zope.interface.verify import verifyObject
-from zope.testbrowser.interfaces import ILink
-from plone.testing.z2 import Browser
-
 from hexagonit.virtualgallery.tests.base import IntegrationTestCase
-
+from validictory import validate
+from zope.interface import alsoProvides
 
 class TestItems(IntegrationTestCase):
     """Test retrieving items that are then JSON-ized."""
@@ -72,7 +61,7 @@ class TestItems(IntegrationTestCase):
         self.assertEquals(1, len(items))
         self.assertEquals('image title', items[0]['title'])
 
-    def test_folder_items(self):
+    def test_collection_items(self):
         """Test items returned for Collection."""
         # create a test Collection
         criterion = self.portal.collection.addCriterion('Type', 'ATPortalTypeCriterion')
