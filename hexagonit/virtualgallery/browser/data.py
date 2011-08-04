@@ -47,7 +47,7 @@ class JSONBase(BrowserView):
                 roomName="Room [x]",
             ),
             "settings": dict(
-                anaglyphModeEnabled="true",
+                anaglyphModeEnabled="false",
             ),
             "images": images,
         })
