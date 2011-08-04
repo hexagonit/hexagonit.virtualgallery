@@ -43,6 +43,7 @@ setup(name='hexagonit.virtualgallery',
           'plone.browserlayer',
           'setuptools',
           'unittest2',
+          'validictory',
       ],
       entry_points="""
       # -*- Entry points: -*-

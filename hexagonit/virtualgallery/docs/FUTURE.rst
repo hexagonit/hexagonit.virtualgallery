@@ -1,7 +1,7 @@
 TODO
 ====
 
-* JSON schema validation
 * translations
 * cross-browser testing
+* use in the wild
 

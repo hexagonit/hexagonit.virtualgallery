@@ -8,6 +8,8 @@ import json
 
 from DateTime import DateTime
 
+from validictory import validate
+
 from zope.component import getUtility
 from zope.interface import alsoProvides
 from zope.interface.verify import verifyObject
@@ -15,8 +17,6 @@ from zope.testbrowser.interfaces import ILink
 from plone.testing.z2 import Browser
 
 from hexagonit.virtualgallery.tests.base import IntegrationTestCase
-from hexagonit.virtualgallery.browser.data import FolderJSON
-from hexagonit.virtualgallery.browser.data import TopicJSON
 
 
 class TestItems(IntegrationTestCase):
@@ -46,13 +46,17 @@ class TestItems(IntegrationTestCase):
         """Test JSON response: paramters, content-type, etc."""
         view = self.portal.folder.unrestrictedTraverse('virtualgallery.json')
         output = view()
-        params = json.loads(output)
+        data = json.loads(output)
 
         # test response content-type
         self.assertEquals('application/json', self.request.RESPONSE.getHeader('Content-Type'))
 
         # test gallery parameters
-        self.assertEquals(params['settings']['anaglyphModeEnabled'], 'false')
+        self.assertEquals(data['settings']['anaglyphModeEnabled'], 'false')
+
+        # validate JSON schema
+        from hexagonit.virtualgallery.schema import GALLERY_DATA_SCHEMA
+        validate(data, GALLERY_DATA_SCHEMA)
 
     def test_folder_items(self):
         """Test items returned for Folder."""
@@ -60,6 +64,7 @@ class TestItems(IntegrationTestCase):
         output = view()
 
         # Test that we have the correct view class (according to content-type)
+        from hexagonit.virtualgallery.browser.data import FolderJSON
         self.assertIsInstance(view, FolderJSON)
 
         # test we have image in items, but not page
@@ -78,6 +83,7 @@ class TestItems(IntegrationTestCase):
         output = view()
 
         # Test that we have the correct view class (according to content-type)
+        from hexagonit.virtualgallery.browser.data import TopicJSON        
         self.assertIsInstance(view, TopicJSON)
 
         # test we have image in items, but not page
