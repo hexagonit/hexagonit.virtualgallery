@@ -12,6 +12,9 @@ from plone.app.testing import login
 from plone.app.testing import setRoles
 from plone.app.testing import applyProfile
 from plone.testing import z2
+from Acquisition import aq_inner
+from zope.component import getMultiAdapter
+from zope.interface import alsoProvides
 
 
 class HexagonitVirtualgalleryLayer(PloneSandboxLayer):
@@ -29,7 +32,7 @@ class HexagonitVirtualgalleryLayer(PloneSandboxLayer):
         """Set up Plone."""
         # Install into Plone site using portal_setup
         applyProfile(portal, 'hexagonit.virtualgallery:default')
-
+    
         # Create test contemt
         setRoles(portal, TEST_USER_ID, ['Manager'])
         login(portal, TEST_USER_NAME)
