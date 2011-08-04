@@ -57,7 +57,6 @@ Let's now add an Image, to our Folder.
 Set Folder's display view to 'virtualgallery'
 ---------------------------------------------
 
-
     Verify that we have the link to display view.
     >>> browser.open(portal.gallery.absolute_url())
     >>> browser.getLink(id='virtualgallery').url.endswith("selectViewTemplate?templateId=virtualgallery")

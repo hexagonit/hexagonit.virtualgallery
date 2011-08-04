@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+"""Setup/installation tests for this package."""
+
 from hexagonit.virtualgallery.tests.base import IntegrationTestCase
 from Products.CMFCore.utils import getToolByName
 from zope.interface import alsoProvides
@@ -52,10 +55,11 @@ class TestCase(IntegrationTestCase):
 
         # test that default drop-down menu items are still there
         self.assertTrue('folder_summary_view' in folder_views)
-        self.assertTrue('folder_full_view' in collection_views)        
+        self.assertTrue('folder_full_view' in collection_views)
 
 
 def test_suite():
     """This sets up a test suite that actually runs the tests in the class
     above."""
     return unittest.defaultTestLoader.loadTestsFromName(__name__)
+

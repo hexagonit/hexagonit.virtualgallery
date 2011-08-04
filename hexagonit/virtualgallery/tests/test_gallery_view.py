@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""Tests for @@virtualgallery view that renders out Virtual 3D gallery."""
 
 import transaction
 
@@ -44,3 +45,4 @@ def test_suite():
     """This sets up a test suite that actually runs the tests in the class
     above."""
     return unittest.defaultTestLoader.loadTestsFromName(__name__)
+

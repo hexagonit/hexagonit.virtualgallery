@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+"""Prepare JSON data that is used in Flash for rendering Virtual 3D gallery."""
+
 from Products.CMFCore.utils import getToolByName
 from plone.app.contentlisting.interfaces import IContentListing
 from Products.Five.browser import BrowserView

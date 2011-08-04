@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+"""Boilerplate for doctest functional tests."""
+
 from hexagonit.virtualgallery.tests.base import FUNCTIONAL_TESTING
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
@@ -76,3 +79,4 @@ def test_suite():
     return unittest.TestSuite([
         DocFileSuite('functional/story.txt'),
         ])
+

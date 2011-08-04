@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Base module for unittesting"""
 
 import unittest2 as unittest
@@ -34,7 +35,7 @@ class HexagonitVirtualgalleryLayer(PloneSandboxLayer):
         """Set up Plone."""
         # Install into Plone site using portal_setup
         applyProfile(portal, 'hexagonit.virtualgallery:default')
-    
+
         # Create test contemt
         setRoles(portal, TEST_USER_ID, ['Manager'])
         login(portal, TEST_USER_NAME)
@@ -68,3 +69,4 @@ class FunctionalTestCase(unittest.TestCase):
     """Base class for functional tests."""
 
     layer = FUNCTIONAL_TESTING
+
