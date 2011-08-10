@@ -1,8 +1,11 @@
 Changelog
 =========
 
-1.0b3 (unreleased)
+1.0b3 (2011-08-10)
 ------------------
+
+- Fixed packaging error in 1.0b2.
+  [dokai]
 
 - JSON schema validation.
   [zupo]
