@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """Prepare JSON data that is used in Flash for rendering Virtual 3D gallery."""
-
+from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
-from plone.app.contentlisting.interfaces import IContentListing
 from Products.Five.browser import BrowserView
+from hexagonit.virtualgallery import HexagonitVirtualgalleryMessageFactory as _
+from plone.app.contentlisting.interfaces import IContentListing
 
 import json
 
@@ -12,6 +13,7 @@ class JSONBase(BrowserView):
     """Base class for generating JSON data for virtual gallery."""
 
     def jsonize(self, items):
+        context = aq_inner(self.context)
 
         # filter out non-image objects
         image_types = getToolByName(self.context, 'portal_tinymce').imageobjects
@@ -31,19 +33,20 @@ class JSONBase(BrowserView):
         self.request.RESPONSE.setHeader('Content-Type', 'application/json')
         return json.dumps({
             "ui": dict(
-                next="next",
-                prev="prev",
-                forward="forward",
-                backward="backward",
-                left="left",
-                right="right",
-                anaglyph="anaglyph",
-                fullscreen="fullscreen",
-                loadingImg="loading image:",
-                spaceToEnterRoom="press space to enter",
-                spaceToCloseUp="press space to zoom in",
-                enterRoom="You entering room no [x] of [y]",
-                enterRoomToolTip="Enter [x] room",
+                next=context.translate(_(u"Next")),
+                prev=context.translate(_(u"Previous")),
+                # TODO: Add the context.translate() calls below!
+                forward="Forward",
+                backward="Backward",
+                left="Left",
+                right="Right",
+                anaglyph="Anaglyph",
+                fullscreen="Fullscreen",
+                loadingImg="Loading image:",
+                spaceToEnterRoom="Press space to enter",
+                spaceToCloseUp="Press space to zoom in",
+                enterRoom="You are entering room [x] of [y]",
+                enterRoomToolTip="Enter room [x]",
                 roomName="Room [x]",
             ),
             "settings": dict(
@@ -73,4 +76,3 @@ class TopicJSON(JSONBase):
 
         # convert catalog brains into plone.app.contentlisting items and return
         return self.jsonize(IContentListing(brains))
-

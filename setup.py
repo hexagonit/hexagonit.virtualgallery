@@ -44,6 +44,7 @@ setup(name='hexagonit.virtualgallery',
           'setuptools',
           'unittest2',
           'validictory',
+          'zope.i18nmessageid',
       ],
       entry_points="""
       # -*- Entry points: -*-
