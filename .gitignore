@@ -5,3 +5,4 @@ hexagonit/virtualgallery/docs/_build/*
 *~
 .DS_Store
 dist
+**.mo
