@@ -1,6 +1,25 @@
 Changelog
 =========
 
+1.0b5 (unreleased)
+------------------
+
+- Fixed the Flash window mode so that Plone dropdown menus are visible
+  on top of the Flash movie.
+  [dokai]
+
+- Updated the Flash movie to a new version. Highlights:
+
+    * No more empty frames on walls.
+    * The default position when entering a room shows the middle box
+      with the room number better.
+    * Redundant tooltips (prev, next, forward, backward, etc) removed.
+    * Traversal through doors using mouse clicks.
+
+  Removed also the now redundant entries in the JSON configuration.
+
+  [dokai]
+
 1.0b4 (2011-08-10)
 ------------------
 

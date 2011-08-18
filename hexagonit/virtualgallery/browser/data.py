@@ -33,21 +33,11 @@ class JSONBase(BrowserView):
         self.request.RESPONSE.setHeader('Content-Type', 'application/json')
         return json.dumps({
             "ui": dict(
-                next=context.translate(_(u"Next")),
-                prev=context.translate(_(u"Previous")),
-                # TODO: Add the context.translate() calls below!
-                forward="Forward",
-                backward="Backward",
-                left="Left",
-                right="Right",
                 anaglyph="Anaglyph",
                 fullscreen="Fullscreen",
                 loadingImg="Loading image:",
-                spaceToEnterRoom="Press space to enter",
-                spaceToCloseUp="Press space to zoom in",
-                enterRoom="You are entering room [x] of [y]",
-                enterRoomToolTip="Enter room [x]",
-                roomName="Room [x]",
+                enterRoom="Entering room [x] of [y]",
+                enterRoomToolTip="Click to enter",
             ),
             "settings": dict(
                 anaglyphModeEnabled="false",
