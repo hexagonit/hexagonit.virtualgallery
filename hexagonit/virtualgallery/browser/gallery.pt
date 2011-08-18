@@ -10,8 +10,8 @@
     	<script src="swfobject.js" type="text/javascript"
             tal:attributes="src string:${view/portal_url}/++resource++hexagonit.virtualgallery/swfobject.js"></script>
         <script type="text/javascript" charset="utf-8"
-                tal:content='string: 
-                    jQuery(function () { 
+                tal:content='string:
+                    jQuery(function () {
                     var flashvars = {
                         dataURL:"${view/context_url}/@@virtualgallery.json"
                     };
@@ -27,7 +27,7 @@
                         id:"Virtual3DGallery"
                     };
                     function callbackFn(e) {
-                        $("#virtualgallery-wrapper").height($("#virtualgallery-wrapper").width() / 2.5);
+                        $("#virtualgallery-wrapper").height($("#virtualgallery-wrapper").width() / 2.0);
                     }
                     swfobject.embedSWF(
                     "${view/portal_url}/++resource++hexagonit.virtualgallery/Virtual3DGallery.swf",
