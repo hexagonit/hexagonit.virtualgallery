@@ -20,7 +20,8 @@
                         scale: "noScale",
                         allowFullscreen: "true",
                         allowScriptAccess: "always",
-                        bgcolor: "#FFFFFF"
+                        bgcolor: "#FFFFFF",
+                        wmode: "opaque"
                     };
                     var attributes = {
                         id:"Virtual3DGallery"
