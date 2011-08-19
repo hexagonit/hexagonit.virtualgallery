@@ -15,6 +15,8 @@ Changelog
       with the room number better.
     * Redundant tooltips (prev, next, forward, backward, etc) removed.
     * Traversal through doors using mouse clicks.
+    * Repositioned the prev/next and fullscreen buttons.
+    * Fixed a bug with image info popups being sticky in fullscreen mode.
 
   Removed also the now redundant entries in the JSON configuration.
 
