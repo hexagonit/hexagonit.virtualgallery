@@ -27,7 +27,7 @@ class TestCase(IntegrationTestCase):
         self.installer.uninstallProducts(['hexagonit.virtualgallery'])
         self.failIf(self.installer.isProductInstalled('hexagonit.virtualgallery'))
 
-    # browser/configure.zcml
+    # browserlayer.xml
     def test_browserlayer(self):
         """Test that IHexagonitVirtualgalleryLayer is registered."""
         from hexagonit.virtualgallery.browser.interfaces import IHexagonitVirtualgalleryLayer
