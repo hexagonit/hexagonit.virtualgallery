@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """Prepare JSON data that is used in Flash for rendering Virtual 3D gallery."""
-from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from hexagonit.virtualgallery import HexagonitVirtualgalleryMessageFactory as _
@@ -13,8 +12,6 @@ class JSONBase(BrowserView):
     """Base class for generating JSON data for virtual gallery."""
 
     def jsonize(self, items):
-        context = aq_inner(self.context)
-
         # filter out non-image objects
         image_types = getToolByName(self.context, 'portal_tinymce').imageobjects
         items = [item for item in items if item.Type() in image_types]
