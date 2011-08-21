@@ -30,11 +30,11 @@ class JSONBase(BrowserView):
         self.request.RESPONSE.setHeader('Content-Type', 'application/json')
         return json.dumps({
             "ui": dict(
-                anaglyph="Anaglyph",
-                fullscreen="Fullscreen",
-                loadingImg="Loading image:",
-                enterRoom="Entering room [x] of [y]",
-                enterRoomToolTip="Click to enter",
+                anaglyph=_(u"Anaglyph"),
+                fullscreen=_(u"Fullscreen"),
+                loadingImg=_(u"Loading image:"),
+                enterRoom=_(u"Entering room [x] of [y]"),
+                enterRoomToolTip=_(u"Click to enter"),
             ),
             "settings": dict(
                 anaglyphModeEnabled="false",
