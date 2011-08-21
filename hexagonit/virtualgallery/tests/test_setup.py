@@ -37,7 +37,8 @@ class TestCase(IntegrationTestCase):
     # browser/configure.zcml
     def test_marker_interface(self):
         """Test that Folder and Collection provides IVirtualGalleryEnabled
-        marker interface."""
+        marker interface.
+        """
         from hexagonit.virtualgallery.browser.interfaces import IVirtualgalleryEnabled
         self.assertTrue(IVirtualgalleryEnabled in providedBy(self.portal.folder))
         self.assertTrue(IVirtualgalleryEnabled in providedBy(self.portal.collection))
@@ -46,7 +47,8 @@ class TestCase(IntegrationTestCase):
     # Topic.xml
     def test_display_mode(self):
         """Test that the @@virtualgallery view is available in Folder's and
-        Collection's display drop-down menu."""
+        Collection's display drop-down menu.
+        """
         folder_views = self.portal.portal_types.Folder.view_methods
         collection_views = self.portal.portal_types.Topic.view_methods
         self.assertTrue('virtualgallery' in folder_views)
