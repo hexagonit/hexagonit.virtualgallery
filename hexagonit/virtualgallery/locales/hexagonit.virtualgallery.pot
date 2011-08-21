@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-17 06:33+0000\n"
+"POT-Creation-Date: 2011-08-21 00:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,23 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: hexagonit.virtualgallery\n"
 
-#: ./browser/data.py:36
-msgid "Next"
+#: ./browser/data.py:33
+msgid "Anaglyph"
 msgstr ""
 
 #: ./browser/data.py:37
-msgid "Previous"
+msgid "Click to enter"
+msgstr ""
+
+#: ./browser/data.py:36
+msgid "Entering room [x] of [y]"
+msgstr ""
+
+#: ./browser/data.py:34
+msgid "Fullscreen"
+msgstr ""
+
+#: ./browser/data.py:35
+msgid "Loading image:"
 msgstr ""
 
