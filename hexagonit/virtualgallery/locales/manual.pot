@@ -1,0 +1,14 @@
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: hexagonit.virtualgallery\n"
+
+msgid "Virtual 3D gallery view"
+msgstr ""
+
+msgid "A Virtual 3D gallery of images in this item."
+msgstr ""

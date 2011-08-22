@@ -1,10 +1,7 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-21 00:05+0000\n"
+"POT-Creation-Date: 2011-08-22 14:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +13,9 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: hexagonit.virtualgallery\n"
+
+msgid "A Virtual 3D gallery of images in this item."
+msgstr ""
 
 #: ./browser/data.py:33
 msgid "Anaglyph"
@@ -35,5 +35,8 @@ msgstr ""
 
 #: ./browser/data.py:35
 msgid "Loading image:"
+msgstr ""
+
+msgid "Virtual 3D gallery view"
 msgstr ""
 

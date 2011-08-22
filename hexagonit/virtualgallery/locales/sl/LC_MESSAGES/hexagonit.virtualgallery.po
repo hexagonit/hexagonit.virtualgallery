@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-20 23:54+0000\n"
+"POT-Creation-Date: 2011-08-22 14:47+0000\n"
 "PO-Revision-Date: 2011-08-21 02:03 +0200\n"
 "Last-Translator: Nejc Zupan <nejc.zupan@gmail.com>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -16,9 +16,8 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: hexagonit.virtualgallery\n"
 
-#: ./browser/configure.zcml:38
 msgid "A Virtual 3D gallery of images in this item."
-msgstr ""
+msgstr "Virtualna 3D galerija slik v tej vsebini."
 
 #: ./browser/data.py:33
 msgid "Anaglyph"
@@ -40,7 +39,6 @@ msgstr "Celozaslonski način"
 msgid "Loading image:"
 msgstr "Nalaganje slike:"
 
-#: ./browser/configure.zcml:36
 msgid "Virtual 3D gallery view"
-msgstr ""
+msgstr "Virtualna 3D galerija"
 

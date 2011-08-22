@@ -4,6 +4,9 @@ Changelog
 1.0b5 (unreleased)
 ------------------
 
+- Support for translations added.
+  [zupo]
+
 - Fixed the Flash window mode so that Plone dropdown menus are visible
   on top of the Flash movie.
   [dokai]
@@ -48,8 +51,10 @@ Changelog
 
 - Code cleanups.
   [zupo]
+  
 - More comments and documentation.
   [zupo]
+  
 - More tests.
   [zupo]
 
