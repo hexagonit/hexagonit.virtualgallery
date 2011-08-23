@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-17 06:33+0000\n"
+"POT-Creation-Date: 2011-08-23 07:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,12 +12,30 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: hexagonit.virtualgallery\n"
 
-#: ./browser/data.py:36
-msgid "Next"
-msgstr "Seuraava"
+msgid "A Virtual 3D gallery of images in this item."
+msgstr "3D-galleria sisällön kuvista"
+
+#: ./browser/data.py:33
+msgid "Anaglyph"
+msgstr "Anaglyyfi"
 
 #: ./browser/data.py:37
-msgid "Previous"
-msgstr "Edellinen"
+msgid "Click to enter"
+msgstr "Klikkaa astuaksesi sisään"
+
+#: ./browser/data.py:36
+msgid "Entering room [x] of [y]"
+msgstr "Huone [x] / [y]"
+
+#: ./browser/data.py:34
+msgid "Fullscreen"
+msgstr "Kokoruututila"
+
+#: ./browser/data.py:35
+msgid "Loading image:"
+msgstr "Ladataan kuvaa:"
+
+msgid "Virtual 3D gallery view"
+msgstr "3D-virtuaaligallerianäkymä"
