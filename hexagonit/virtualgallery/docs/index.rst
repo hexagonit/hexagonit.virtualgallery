@@ -17,7 +17,7 @@ Sync a translation file with POT:
 
 .. code-block:: sh
 
-    $ i18ndude sync --pot locales/hexagonit.virtualgallery.pot locales/sl/LC_MESSAGES/hexagonit.virtualgallery.po
+    $ find locales -name '*.po' -exec i18ndude sync --pot locales/hexagonit.virtualgallery.pot {} \;
 
 Indices and tables
 ==================
