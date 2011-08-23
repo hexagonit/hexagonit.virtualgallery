@@ -16,11 +16,10 @@ To install ``hexagonit.virtualgallery`` you simply add
 buildout and restart Plone. Then, install `hexagonit.virtualgallery` using the
 Add-ons control panel.
 
-Usage
-=====
+.. note:: The flash viewer requires Flash player version 10.2 or newer.
 
 Basic usage
------------
+===========
 
 This package adds the `Virtual 3D gallery` display mode to Folder and
 Collection. So, go to any folder or collection that contains images and select
@@ -42,7 +41,7 @@ by clicking on the fullscreen button on the top right corner.
 .. image:: images/screenshot.png
 
 Advanced usage
---------------
+==============
 
 The Flash viewer is independent of Plone and may be used in any web context,
 even another framework or a language environment. The viewer requires two
@@ -52,7 +51,7 @@ distinct parts to work:
     * JSON configuration which configures the viewer.
 
 Embed code
-''''''''''
+----------
 
 The HTML code needs to embed the ``Virtual3DGallery.swf`` viewer and pass a
 single `flashvars <http://kb2.adobe.com/cps/164/tn_16417.html>`_ variable
@@ -68,7 +67,7 @@ By default, this package uses the `SWFObject
 embedding.
 
 JSON configuration
-''''''''''''''''''
+------------------
 
 The Flash viewer is driven by the JSON configuration which contains the list
 of images to display in the gallery, associated image metadata (title, author,
