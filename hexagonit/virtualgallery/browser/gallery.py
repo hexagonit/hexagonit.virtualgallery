@@ -6,10 +6,11 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 class VirtualGalleryView(BrowserView):
     """A BrowserView to display the Virtual 3D gallery."""
-    template = ViewPageTemplateFile('gallery.pt')
+    index = ViewPageTemplateFile('gallery.pt')
 
     def __call__(self):
-        self.context_url = self.context.absolute_url()
-        self.portal_url = self.context.portal_url()
-        return self.template()
-
+        options = {
+            'context_url': self.context.absolute_url(),
+            'portal_url': self.context.portal_url()
+        }
+        return self.index(**options)
