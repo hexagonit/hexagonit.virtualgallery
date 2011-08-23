@@ -4,6 +4,12 @@ Changelog
 1.0b5 (unreleased)
 ------------------
 
+- Updated documentation
+  [dokai]
+
+- Updated Finnish translations.
+  [dokai]
+
 - Support for translations added.
   [zupo]
 
@@ -20,6 +26,9 @@ Changelog
     * Traversal through doors using mouse clicks.
     * Repositioned the prev/next and fullscreen buttons.
     * Fixed a bug with image info popups being sticky in fullscreen mode.
+    * Fixed a bug with empty galleries.
+    * Fixed a bug with tooltips not expanding correctly over different
+      sized text.
 
   Removed also the now redundant entries in the JSON configuration.
 
@@ -51,10 +60,10 @@ Changelog
 
 - Code cleanups.
   [zupo]
-  
+
 - More comments and documentation.
   [zupo]
-  
+
 - More tests.
   [zupo]
 
