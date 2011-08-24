@@ -3,24 +3,57 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from hexagonit.virtualgallery import HexagonitVirtualgalleryMessageFactory as _
+from hexagonit.virtualgallery import ORIGINAL_SCALE
+from hexagonit.virtualgallery.interfaces import IVirtualGallerySettings
+from itertools import ifilter
 from plone.app.contentlisting.interfaces import IContentListing
 
 import json
+import logging
+
+LOG = logging.getLogger('hexagonit.virtualgallery')
 
 
 class JSONBase(BrowserView):
     """Base class for generating JSON data for virtual gallery."""
 
-    def jsonize(self, items):
-        # filter out non-image objects
-        image_types = getToolByName(self.context, 'portal_tinymce').imageobjects
-        items = [item for item in items if item.Type() in image_types]
+    def image_url(self, item, scale):
+        """Returns an URL to the image at the desired scale.
 
-        # construct list of images
+        If the scale is not available, falls back to the original
+        scale of the image.
+
+        :param item: An image object reference
+        :type item: `plone.app.contentlisting.interfaces.IContentListingObject`
+
+        :param scale: An image scale identifier
+        :type scale: str
+
+        :rtype: str
+        :return: Scaled image URL.
+        """
+        if scale == ORIGINAL_SCALE:
+            return item.getURL()
+
+        image = item.getObject()
+        scales = image.restrictedTraverse('@@images')
+        try:
+            return scales.scale('image', scale=scale).url
+        except AttributeError:
+            # The configured scale is no longer recognized, fall back to the
+            # original image size.
+            LOG.warn('Image scale "{0}" not available for {1}'.format(scale, item.getPath()))
+            return item.getURL()
+
+    def jsonize(self, items):
+        # Consult the TinyMCE configuration to determine which types are images.
+        image_types = set(getToolByName(self.context, 'portal_tinymce').imageobjects.strip().splitlines())
+        settings = IVirtualGallerySettings(self.context)
+
         images = []
-        for item in items:
+        for item in ifilter(lambda o: o.Type() in image_types, items):
             images.append(dict(
-                url=item.getURL(),
+                url=self.image_url(item, settings.image_scale),
                 description=item.Description(),
                 author=item.Creator(),
                 title=item.Title(),

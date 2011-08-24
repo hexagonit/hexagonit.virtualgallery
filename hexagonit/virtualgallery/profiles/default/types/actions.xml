@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+    <action-provider name="portal_actions">
+
+        <action
+            title="Virtual gallery settings"
+            action_id="virtualgallery_settings"
+            category="object"
+            condition_expr="object/@@virtualgallery-enabled"
+            url_expr="string:${object_url}/@@virtualgallery-settings"
+            visible="True"
+            i18n:attributes="title"
+            i18n:domain="hexagonit.virtualgallery">
+            <permission>Manage portal content</permission>
+        </action>
+
+    </action-provider>
+</object>

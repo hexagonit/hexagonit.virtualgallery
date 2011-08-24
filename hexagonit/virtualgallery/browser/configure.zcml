@@ -4,6 +4,26 @@
     xmlns:zope="http://namespaces.zope.org/zope"
     i18n_domain="hexagonit.virtualgallery">
 
+  <!-- Gallery settings -->
+
+  <utility
+    provides="zope.schema.interfaces.IVocabularyFactory"
+    component=".settings.ImageScaleVocabulary"
+    name="hexagonit.virtualgallery.ImageScaleVocabulary"
+    />
+  <adapter factory="hexagonit.virtualgallery.browser.settings.GallerySettings"/>
+  <browser:page
+    name="virtualgallery-settings"
+    for=".interfaces.IVirtualgalleryEnabled"
+    class=".settings.GallerySettingsForm"
+    permission="cmf.ModifyPortalContent"
+    />
+  <browser:page
+    name="virtualgallery-enabled"
+    for="*"
+    class=".settings.GalleryEnabled"
+    permission="zope2.View"
+    />
 
   <!-- Publish static media files -->
   <browser:resourceDirectory
@@ -17,7 +37,7 @@
   </class>
   <class class="Products.ATContentTypes.content.topic.ATTopic">
     <implements interface=".interfaces.IVirtualgalleryEnabled" />
-  </class> 
+  </class>
 
   <!-- This is the view that renders our virtual 3D gallery -->
   <browser:page

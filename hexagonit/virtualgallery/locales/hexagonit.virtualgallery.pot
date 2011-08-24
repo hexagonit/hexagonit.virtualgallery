@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-23 07:10+0000\n"
+"POT-Creation-Date: 2011-08-24 13:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,62 @@ msgstr ""
 msgid "A Virtual 3D gallery of images in this item."
 msgstr ""
 
-#: ./browser/data.py:33
+#: ./browser/data.py:66
 msgid "Anaglyph"
 msgstr ""
 
-#: ./browser/data.py:37
+#: ./browser/data.py:70
 msgid "Click to enter"
 msgstr ""
 
-#: ./browser/data.py:36
+#: ./browser/settings.py:77
+msgid "Configure this virtualgallery"
+msgstr ""
+
+#: ./browser/data.py:69
 msgid "Entering room [x] of [y]"
 msgstr ""
 
-#: ./browser/data.py:34
+#: ./browser/settings.py:83
+msgid "Failed to updated virtual gallery settings."
+msgstr ""
+
+#: ./browser/data.py:67
 msgid "Fullscreen"
 msgstr ""
 
-#: ./browser/data.py:35
+#: ./browser/data.py:68
 msgid "Loading image:"
 msgstr ""
 
+#: ./browser/settings.py:31
+msgid "Original size"
+msgstr ""
+
+#: ./browser/settings.py:79
+msgid "Save changes"
+msgstr ""
+
 msgid "Virtual 3D gallery view"
+msgstr ""
+
+#: ./browser/settings.py:76
+#: ./profiles/default/actions.xml
+#: ./profiles/default/types/actions.xml
+msgid "Virtual gallery settings"
+msgstr ""
+
+#: ./browser/settings.py:87
+msgid "Virtual gallery settings updated"
+msgstr ""
+
+#. Default: "Select the appropriate image scale to use in the virtual gallery. Using a smaller scale will make the gallery load faster but results in lesser quality images."
+#: ./interfaces.py:12
+msgid "description_image_scale"
+msgstr ""
+
+#. Default: "Image scale"
+#: ./interfaces.py:11
+msgid "label_image_scale"
 msgstr ""
 
