@@ -57,8 +57,13 @@ Let's now add an Image, to our Folder.
 Set Folder's display view to 'virtualgallery'
 ---------------------------------------------
 
-    Verify that we have the link to display view.
+    First, make sure that the settings action is not available before
+    activating the gallery view.
     >>> browser.open(portal.gallery.absolute_url())
+    >>> 'Virtual gallery settings' in browser.contents
+    False
+
+    Verify that we have the link to display view.
     >>> browser.getLink(id='virtualgallery').url.endswith("selectViewTemplate?templateId=virtualgallery")
     True
 
@@ -76,3 +81,32 @@ Set Folder's display view to 'virtualgallery'
     True
     >>> '<div id="altContent">' in browser.contents
     True
+
+    Check that the settings action is now visible.
+    >>> 'Virtual gallery settings' in browser.contents
+    True
+
+
+Configure the gallery to use a particular image scale
+-----------------------------------------------------
+
+Navigate to the virtual gallery settings form.
+
+    >>> browser.getLink('Virtual gallery settings').click()
+    >>> browser.url.endswith('@@virtualgallery-settings')
+    True
+
+    Make sure we have a selection of scales to choose from.
+    >>> image_scale = browser.getControl('Image scale')
+    >>> image_scale.options
+    ['__original__', 'icon', 'large', 'listing', 'mini', 'preview', 'thumb', 'tile']
+
+    Choose a scale
+    >>> image_scale.value = ['thumb']
+    >>> browser.getControl('Save changes').click()
+
+    Assert that the choice was persisted correctly.
+
+    >>> from hexagonit.virtualgallery.interfaces import IVirtualGallerySettings
+    >>> IVirtualGallerySettings(portal.gallery).image_scale
+    'thumb'
