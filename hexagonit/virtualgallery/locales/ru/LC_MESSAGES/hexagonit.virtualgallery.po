@@ -15,63 +15,63 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 msgid "A Virtual 3D gallery of images in this item."
-msgstr ""
+msgstr "Виртуальная 3D-галерея изображений."
 
 #: ./browser/data.py:66
 msgid "Anaglyph"
-msgstr ""
+msgstr "Анаглиф"
 
 #: ./browser/data.py:70
 msgid "Click to enter"
-msgstr ""
+msgstr "Щёлкните для входа"
 
 #: ./browser/settings.py:81
 msgid "Configure this virtualgallery"
-msgstr ""
+msgstr "Настройка виртуальной галереи"
 
 #: ./browser/data.py:69
 msgid "Entering room [x] of [y]"
-msgstr ""
+msgstr "Комната [x] (из [y])"
 
 #: ./browser/settings.py:88
 msgid "Failed to update virtual gallery settings."
-msgstr ""
+msgstr "Ошибка обновления настроек виртуальной галереи."
 
 #: ./browser/data.py:67
 msgid "Fullscreen"
-msgstr ""
+msgstr "Полноэкранный режим"
 
 #: ./browser/data.py:68
 msgid "Loading image:"
-msgstr ""
+msgstr "Загрузка изображения:"
 
 #: ./browser/settings.py:31
 msgid "Original size"
-msgstr ""
+msgstr "Оригинальный размер"
 
 #: ./browser/settings.py:83
 msgid "Save changes"
-msgstr ""
+msgstr "Сохранить изменения"
 
 msgid "Virtual 3D gallery view"
-msgstr ""
+msgstr "Виртуальная 3D-галерея"
 
 #: ./browser/settings.py:80
 #: ./profiles/default/actions.xml
 msgid "Virtual gallery settings"
-msgstr ""
+msgstr "Настройки виртуальной галереи"
 
 #: ./browser/settings.py:92
 msgid "Virtual gallery settings updated"
-msgstr ""
+msgstr "Настройки виртуальной галереи обновлены"
 
 #. Default: "Select the appropriate image scale to use in the virtual gallery. Using a smaller scale will make the gallery load faster but results in lesser quality images."
 #: ./interfaces.py:12
 msgid "description_image_scale"
-msgstr ""
+msgstr "Выберите подходящий масштаб изображения для виртуальной галереи. Использование более мелкого масштаба ускоряет работу галереи за счёт ухудшения качества изображений."
 
 #. Default: "Image scale"
 #: ./interfaces.py:11
 msgid "label_image_scale"
-msgstr ""
+msgstr "Масштаб изображения"
 
