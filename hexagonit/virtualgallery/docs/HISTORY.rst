@@ -4,6 +4,10 @@ Changelog
 1.0b5 (unreleased)
 ------------------
 
+- Added support for configuring the image scale used in the gallery
+  on per-context basis.
+  [dokai]
+
 - Updated documentation
   [dokai]
 

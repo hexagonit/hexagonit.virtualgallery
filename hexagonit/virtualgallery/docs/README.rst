@@ -40,6 +40,23 @@ by clicking on the fullscreen button on the top right corner.
 
 .. image:: images/screenshot.png
 
+Configuration
+=============
+
+Each gallery may be configured to use a particular image scale (provided by
+`plone.app.imaging <http://pypi.python.org/pypi/plone.app.imaging>`_) by
+choosing the appropriate scale on the ``Virtual gallery settings`` page. A
+link to the settings page will become visible when the context is using the
+virtual gallery display.
+
+By default the gallery uses the original scale of the images but in case of
+large images this may slow down the gallery significantly. Using a smaller
+scale version of the images usually improves the loading time and performance.
+
+You can also configure new image scales in ``Site setup › Image handling``.
+For example, you could define a "HD" scale at 1200x1200 pixels which would
+give most current day users a good quality image even in the fullscreen mode.
+
 Advanced usage
 ==============
 
