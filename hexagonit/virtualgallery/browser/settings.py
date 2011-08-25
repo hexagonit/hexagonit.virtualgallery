@@ -29,10 +29,14 @@ def ImageScaleVocabulary(context):
     :return: A vocabulary of available image scales.
     """
     vocab = [(ORIGINAL_SCALE, _(u'Original size'))]
-    available_scales = getAllowedSizes()
-    for scale_name in sorted(available_scales):
-        width, height = available_scales[scale_name]
-        vocab.append((scale_name, '{0} ({1}x{2})'.format(scale_name.title(), width, height)))
+    # Get the available scales in descending order (based on the area)
+    available_scales = sorted(
+        getAllowedSizes().iteritems(),
+        key=lambda s: s[1][0] * s[1][1],
+        reverse=True)
+
+    for scale, (width, height) in available_scales:
+        vocab.append((scale, '{0} ({1}x{2})'.format(scale.title(), width, height)))
 
     return SimpleVocabulary([
         SimpleTerm(key, key, value) for key, value in vocab])
@@ -79,8 +83,9 @@ class SettingsForm(form.EditForm):
     @button.buttonAndHandler(_('Save changes'), name='save_changes')
     def handleApply(self, action):
         data, errors = self.extractData()
+
         if errors:
-            self.status = _(u'Failed to updated virtual gallery settings.')
+            self.status = _(u'Failed to update virtual gallery settings.')
             return
 
         self.applyChanges(data)
