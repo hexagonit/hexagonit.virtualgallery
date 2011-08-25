@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-25 11:17+0000\n"
+"POT-Creation-Date: 2011-08-25 11:31+0000\n"
 "PO-Revision-Date: 2011-08-21 02:03 +0200\n"
 "Last-Translator: Nejc Zupan <nejc.zupan@gmail.com>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -25,11 +25,11 @@ msgstr "Anaglif"
 
 #: ./browser/data.py:70
 msgid "Click to enter room [x]"
-msgstr ""
+msgstr "Kliknite za vstop v sobo [x]"
 
 #: ./browser/settings.py:81
 msgid "Configure this virtualgallery"
-msgstr ""
+msgstr "Nastavitve virtualne galerije"
 
 #: ./browser/data.py:69
 msgid "Entering room [x] of [y]"
@@ -37,7 +37,7 @@ msgstr "Vstopate v sobo [x] od skupno [y] sob"
 
 #: ./browser/settings.py:88
 msgid "Failed to update virtual gallery settings."
-msgstr ""
+msgstr "Napaka pri shranjevanju nastavitev virtualne galerije."
 
 #: ./browser/data.py:67
 msgid "Fullscreen"
@@ -49,11 +49,11 @@ msgstr "Nalaganje slike:"
 
 #: ./browser/settings.py:31
 msgid "Original size"
-msgstr ""
+msgstr "Originalna velikost"
 
 #: ./browser/settings.py:83
 msgid "Save changes"
-msgstr ""
+msgstr "Spremembe shranjene"
 
 msgid "Virtual 3D gallery view"
 msgstr "Virtualna 3D galerija"
@@ -61,19 +61,19 @@ msgstr "Virtualna 3D galerija"
 #: ./browser/settings.py:80
 #: ./profiles/default/actions.xml
 msgid "Virtual gallery settings"
-msgstr ""
+msgstr "Nastavitve virtualne galerije"
 
 #: ./browser/settings.py:92
 msgid "Virtual gallery settings updated"
-msgstr ""
+msgstr "Nastavitve virtualne galerije so bile posodobljene"
 
 #. Default: "Select the appropriate image scale to use in the virtual gallery. Using a smaller scale will make the gallery load faster but results in lesser quality images."
 #: ./interfaces.py:12
 msgid "description_image_scale"
-msgstr ""
+msgstr "Izberite primerno velikost slike za prikaz v virtualni galeriji. Manjša kot je izbrana velikost, hitreje se bo galerija naložila."
 
 #. Default: "Image scale"
 #: ./interfaces.py:11
 msgid "label_image_scale"
-msgstr ""
+msgstr "Velikost slike"
 
