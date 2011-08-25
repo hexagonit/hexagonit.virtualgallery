@@ -23,7 +23,7 @@ msgstr "Анаглиф"
 
 #: ./browser/data.py:70
 msgid "Click to enter room [x]"
-msgstr ""
+msgstr "Щёлкните для входа в комнату [x]"
 
 #: ./browser/settings.py:81
 msgid "Configure this virtualgallery"
