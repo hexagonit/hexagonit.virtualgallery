@@ -38,6 +38,7 @@ setup(name='hexagonit.virtualgallery',
       zip_safe=False,
       install_requires=[
           'manuel',
+          'mock',
           'plone.app.contentlisting',
           'plone.app.imaging',
           'plone.app.testing',
