@@ -55,7 +55,7 @@ class JSONBase(BrowserView):
             images.append(dict(
                 url=self.image_url(item, settings.image_scale),
                 description=item.Description(),
-                author=item.Creator(),
+                author=u' ',
                 title=item.Title(),
             ))
 
