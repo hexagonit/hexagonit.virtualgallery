@@ -100,7 +100,7 @@ Verify that the JSON configuration contains the correct image
     {
       "images": [
         {
-          "author": "test_user_1_",
+          "author": " ",
           "description": "Lorem lipsum..",
           "title": "Image",
           "url": "http://nohost/plone/gallery/image"
@@ -112,7 +112,7 @@ Verify that the JSON configuration contains the correct image
       "ui": {
         "anaglyph": "Anaglyph",
         "enterRoom": "Entering room [x] of [y]",
-        "enterRoomToolTip": "Click to enter",
+        "enterRoomToolTip": "Click to enter room [x]",
         "fullscreen": "Fullscreen",
         "loadingImg": "Loading image:"
       }
@@ -154,7 +154,7 @@ the particular scale.
     {
       "images": [
         {
-          "author": "test_user_1_",
+          "author": " ",
           "description": "Lorem lipsum..",
           "title": "Image",
           "url": "http://nohost/plone/gallery/image/@@images/2f42f6f2-2d76-4883-9907-0bb8d70621ff.jpeg"
@@ -166,7 +166,7 @@ the particular scale.
       "ui": {
         "anaglyph": "Anaglyph",
         "enterRoom": "Entering room [x] of [y]",
-        "enterRoomToolTip": "Click to enter",
+        "enterRoomToolTip": "Click to enter room [x]",
         "fullscreen": "Fullscreen",
         "loadingImg": "Loading image:"
       }
@@ -184,7 +184,7 @@ the site configuration.
     {
       "images": [
         {
-          "author": "test_user_1_",
+          "author": " ",
           "description": "Lorem lipsum..",
           "title": "Image",
           "url": "http://nohost/plone/gallery/image"
@@ -196,7 +196,7 @@ the site configuration.
       "ui": {
         "anaglyph": "Anaglyph",
         "enterRoom": "Entering room [x] of [y]",
-        "enterRoomToolTip": "Click to enter",
+        "enterRoomToolTip": "Click to enter room [x]",
         "fullscreen": "Fullscreen",
         "loadingImg": "Loading image:"
       }
