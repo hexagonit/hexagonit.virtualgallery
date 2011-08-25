@@ -67,7 +67,7 @@ class JSONBase(BrowserView):
                 fullscreen=self.context.translate(_(u"Fullscreen")),
                 loadingImg=self.context.translate(_(u"Loading image:")),
                 enterRoom=self.context.translate(_(u"Entering room [x] of [y]")),
-                enterRoomToolTip=self.context.translate(_(u"Click to enter")),
+                enterRoomToolTip=self.context.translate(_(u"Click to enter room [x]")),
             ),
             "settings": dict(
                 anaglyphModeEnabled="false",

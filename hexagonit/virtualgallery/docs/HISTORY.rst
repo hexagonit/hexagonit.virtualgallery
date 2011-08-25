@@ -33,6 +33,9 @@ Changelog
     * Fixed a bug with empty galleries.
     * Fixed a bug with tooltips not expanding correctly over different
       sized text.
+    * Fixed a bug where in some cases clicking on an image would zoom-in
+      on a wrong one.
+    * Traversing through doors is possible with a single click.
 
   Removed also the now redundant entries in the JSON configuration.
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-25 08:42+0000\n"
+"POT-Creation-Date: 2011-08-25 11:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,8 +22,8 @@ msgid "Anaglyph"
 msgstr "Anaglyyfi"
 
 #: ./browser/data.py:70
-msgid "Click to enter"
-msgstr "Klikkaa astuaksesi sisään"
+msgid "Click to enter room [x]"
+msgstr "Siirry huoneeseen [x]"
 
 #: ./browser/settings.py:81
 msgid "Configure this virtualgallery"
@@ -74,3 +74,4 @@ msgstr "Valitse sopivan kokoinen kuvakoko galleriaa varten. Pienempi kuvakoko la
 #: ./interfaces.py:11
 msgid "label_image_scale"
 msgstr "Kuvakoko"
+
