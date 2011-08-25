@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-24 13:15+0000\n"
+"POT-Creation-Date: 2011-08-25 08:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,17 +25,17 @@ msgstr "Anaglyyfi"
 msgid "Click to enter"
 msgstr "Klikkaa astuaksesi sisään"
 
-#: ./browser/settings.py:77
+#: ./browser/settings.py:81
 msgid "Configure this virtualgallery"
-msgstr "Muuta tämän virtuaaligallerian asetuksia"
+msgstr "Määritä asetukset tälle virtuaaligallerialle"
 
 #: ./browser/data.py:69
 msgid "Entering room [x] of [y]"
 msgstr "Huone [x] / [y]"
 
-#: ./browser/settings.py:83
-msgid "Failed to updated virtual gallery settings."
-msgstr "Virtuaaligallerian asetusten päivitys epäonnistui."
+#: ./browser/settings.py:88
+msgid "Failed to update virtual gallery settings."
+msgstr "Virtuaaligallerian asetuksien päivitys epäonnistui."
 
 #: ./browser/data.py:67
 msgid "Fullscreen"
@@ -49,20 +49,19 @@ msgstr "Ladataan kuvaa:"
 msgid "Original size"
 msgstr "Alkuperäinen koko"
 
-#: ./browser/settings.py:79
+#: ./browser/settings.py:83
 msgid "Save changes"
 msgstr "Tallenna muutokset"
 
 msgid "Virtual 3D gallery view"
 msgstr "3D-virtuaaligallerianäkymä"
 
-#: ./browser/settings.py:76
+#: ./browser/settings.py:80
 #: ./profiles/default/actions.xml
-#: ./profiles/default/types/actions.xml
 msgid "Virtual gallery settings"
 msgstr "Virtuaaligallerian asetukset"
 
-#: ./browser/settings.py:87
+#: ./browser/settings.py:92
 msgid "Virtual gallery settings updated"
 msgstr "Virtuaaligallerian asetukset ovat päivitetty."
 
@@ -75,4 +74,3 @@ msgstr "Valitse sopivan kokoinen kuvakoko galleriaa varten. Pienempi kuvakoko la
 #: ./interfaces.py:11
 msgid "label_image_scale"
 msgstr "Kuvakoko"
-

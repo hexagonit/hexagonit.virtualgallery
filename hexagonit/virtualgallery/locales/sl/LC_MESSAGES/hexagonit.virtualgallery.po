@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-24 13:15+0000\n"
+"POT-Creation-Date: 2011-08-25 08:42+0000\n"
 "PO-Revision-Date: 2011-08-21 02:03 +0200\n"
 "Last-Translator: Nejc Zupan <nejc.zupan@gmail.com>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
@@ -27,7 +27,7 @@ msgstr "Anaglif"
 msgid "Click to enter"
 msgstr "Kliknite za vstop"
 
-#: ./browser/settings.py:77
+#: ./browser/settings.py:81
 msgid "Configure this virtualgallery"
 msgstr ""
 
@@ -35,8 +35,8 @@ msgstr ""
 msgid "Entering room [x] of [y]"
 msgstr "Vstopate v sobo [x] od skupno [y] sob"
 
-#: ./browser/settings.py:83
-msgid "Failed to updated virtual gallery settings."
+#: ./browser/settings.py:88
+msgid "Failed to update virtual gallery settings."
 msgstr ""
 
 #: ./browser/data.py:67
@@ -51,20 +51,19 @@ msgstr "Nalaganje slike:"
 msgid "Original size"
 msgstr ""
 
-#: ./browser/settings.py:79
+#: ./browser/settings.py:83
 msgid "Save changes"
 msgstr ""
 
 msgid "Virtual 3D gallery view"
 msgstr "Virtualna 3D galerija"
 
-#: ./browser/settings.py:76
+#: ./browser/settings.py:80
 #: ./profiles/default/actions.xml
-#: ./profiles/default/types/actions.xml
 msgid "Virtual gallery settings"
 msgstr ""
 
-#: ./browser/settings.py:87
+#: ./browser/settings.py:92
 msgid "Virtual gallery settings updated"
 msgstr ""
 
