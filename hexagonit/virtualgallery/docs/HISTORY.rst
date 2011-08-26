@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.0b5 (unreleased)
-------------------
+1.0 (2011-08-26)
+----------------
 
 - Added support for configuring the image scale used in the gallery
   on per-context basis.
