@@ -16,7 +16,11 @@ To install ``hexagonit.virtualgallery`` you simply add
 buildout and restart Plone. Then, install `hexagonit.virtualgallery` using the
 Add-ons control panel.
 
-.. note:: The flash viewer requires Flash player version 10.2 or newer.
+Requirements
+============
+
+    * `Plone <http://plone.org/>`_ 4.1 or newer
+    * `Flash player <http://get.adobe.com/flashplayer/>`_ 10.2 or newer
 
 Basic usage
 ===========
@@ -38,7 +42,7 @@ You can view each image in turn by clicking on the arrow buttons on the left
 and right side of the viewer. The viewer can also be put in fullscreen mode
 by clicking on the fullscreen button on the top right corner.
 
-.. image:: images/screenshot.png
+.. image:: https://github.com/hexagonit/hexagonit.virtualgallery/raw/master/hexagonit/virtualgallery/docs/images/screenshot.png
 
 Configuration
 =============
@@ -88,9 +92,7 @@ JSON configuration
 
 The Flash viewer is driven by the JSON configuration which contains the list
 of images to display in the gallery, associated image metadata (title, author,
-description) and translations for the UI textual elements, e.g.
-
-.. code-block:: javascript
+description) and translations for the UI textual elements, e.g.::
 
     {"images": [
         {"url": "http://my.server.com/images/image1.png",
@@ -120,9 +122,7 @@ is valid.
 
 The package contains an associated `JSON schema <http://tools.ietf.org/html
 /draft-zyp-json-schema-03>`_ document which can be used to validate the JSON
-configuration, e.g.
-
-.. code-block:: python
+configuration, e.g.::
 
     from hexagonit.virtualgallery.schema import GALLERY_DATA_SCHEMA
     from validictory import validate
@@ -137,9 +137,12 @@ configuration, e.g.
         # Validation failed, do something.
         pass
 
+
 You might want to display the gallery somewhere else or possibly in a
 toolbarless new window. To keep all Plone stuff away from the virtual gallery
 use a URL like below to only get the title of the gallery and the Flash object
 that displays it::
 
     http://<path>/<to>/<your>/<gallery>/<folder>/virtualgallery?ajax_load=1&ajax_include_head=1
+
+
