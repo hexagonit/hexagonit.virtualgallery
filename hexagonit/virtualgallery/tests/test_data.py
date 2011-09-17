@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 """Tests for gallery JSON generation."""
 
-import unittest2 as unittest
-import json
-
 from hexagonit.virtualgallery.tests.base import IntegrationTestCase
 from validictory import validate
 from zope.interface import alsoProvides
+
+import json
+import unittest2 as unittest
+
 
 class TestItems(IntegrationTestCase):
     """Test retrieving items that are then JSON-ized."""
@@ -72,7 +73,7 @@ class TestItems(IntegrationTestCase):
         output = view()
 
         # Test that we have the correct view class (according to content-type)
-        from hexagonit.virtualgallery.browser.data import TopicJSON        
+        from hexagonit.virtualgallery.browser.data import TopicJSON
         self.assertIsInstance(view, TopicJSON)
 
         # test we have image in items, but not page
@@ -85,4 +86,3 @@ def test_suite():
     """This sets up a test suite that actually runs the tests in the class
     above."""
     return unittest.defaultTestLoader.loadTestsFromName(__name__)
-
