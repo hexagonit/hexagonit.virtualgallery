@@ -6,7 +6,7 @@ from zope.interface import alsoProvides
 from zope.publisher.browser import TestRequest
 
 import mock
-import unittest2 as unittest
+import unittest
 
 
 class TestView(IntegrationTestCase):

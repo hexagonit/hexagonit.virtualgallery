@@ -12,7 +12,7 @@ from plone.app.testing import login
 from plone.app.testing import setRoles
 from plone.testing import z2
 
-import unittest2 as unittest
+import unittest
 
 
 class HexagonitVirtualgalleryLayer(PloneSandboxLayer):

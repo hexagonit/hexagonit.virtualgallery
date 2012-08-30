@@ -6,7 +6,7 @@ from validictory import validate
 from zope.interface import alsoProvides
 
 import json
-import unittest2 as unittest
+import unittest
 
 
 class TestItems(IntegrationTestCase):

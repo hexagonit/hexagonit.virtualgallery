@@ -5,7 +5,7 @@ from hexagonit.virtualgallery.tests.base import IntegrationTestCase
 from Products.CMFCore.utils import getToolByName
 from zope.interface import providedBy
 
-import unittest2 as unittest
+import unittest
 
 
 class TestCase(IntegrationTestCase):

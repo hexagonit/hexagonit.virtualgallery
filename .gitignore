@@ -1,8 +1,9 @@
-hexagonit/virtualgallery/docs/_build/*
+**.mo
 *.egg-info
 *.pyc
 *.pyo
 *~
 .DS_Store
 dist
-**.mo
+hexagonit/virtualgallery/docs/_build/*
+setup.cfg

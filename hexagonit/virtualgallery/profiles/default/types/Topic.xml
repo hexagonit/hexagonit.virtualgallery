@@ -1,4 +1,5 @@
 <object name="Topic">
+  <property name="global_allow" purge="False">True</property>
   <property name="view_methods" purge="False">
     <element value="virtualgallery"/>
   </property>
