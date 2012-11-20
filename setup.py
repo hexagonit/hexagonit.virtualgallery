@@ -18,7 +18,7 @@ long_description = (
 
 setup(
     name='hexagonit.virtualgallery',
-    version='1.0',
+    version='1.0.0.1',
     description="Virtual 3D image gallery for Plone",
     long_description=long_description,
     # Get more strings from
