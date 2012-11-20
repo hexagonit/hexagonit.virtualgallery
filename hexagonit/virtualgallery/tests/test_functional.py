@@ -8,7 +8,6 @@ from plone.app.testing import TEST_USER_NAME
 from plone.app.testing import TEST_USER_PASSWORD
 from plone.testing import layered
 from zope.testing import renormalizing
-# from plone.testing.z2 import Browser
 
 import doctest
 import manuel.codeblock
@@ -76,6 +75,4 @@ def DocFileSuite(testfile, flags=FLAGS, setUp=setUp, layer=FUNCTIONAL_TESTING):
 
 
 def test_suite():
-    return unittest.TestSuite([
-        DocFileSuite('functional/story.txt'),
-        ])
+    return unittest.TestSuite([DocFileSuite('functional/story.txt')])

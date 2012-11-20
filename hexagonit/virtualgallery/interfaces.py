@@ -9,7 +9,8 @@ class IVirtualGallerySettings(Interface):
 
     image_scale = Choice(
         title=_(u'label_image_scale', default=u'Image scale'),
-        description=_(u'description_image_scale',
+        description=_(
+            u'description_image_scale',
             default=u'Select the appropriate image scale to use in the '
                     u'virtual gallery. Using a smaller scale will make '
                     u'the gallery load faster but results in lesser quality '

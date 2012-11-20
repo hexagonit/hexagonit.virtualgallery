@@ -27,10 +27,7 @@ class TestItems(IntegrationTestCase):
 
         # Add test content
         self.portal.folder.invokeFactory('Document', 'page')
-        self.portal.folder.invokeFactory('Image', 'image',
-            title="image title",
-            description="image description"
-        )
+        self.portal.folder.invokeFactory('Image', 'image', title="image title", description="image description")
 
     def test_json_response(self):
         """Test JSON response: paramters, content-type, etc."""

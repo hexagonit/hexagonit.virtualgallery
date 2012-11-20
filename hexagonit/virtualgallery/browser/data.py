@@ -73,7 +73,7 @@ class JSONBase(BrowserView):
                 anaglyphModeEnabled="false",
             ),
             "images": images,
-            }, indent=2, sort_keys=True)
+        }, indent=2, sort_keys=True)
 
 
 class FolderJSON(JSONBase):

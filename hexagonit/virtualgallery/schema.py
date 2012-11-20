@@ -7,9 +7,9 @@ GALLERY_DATA_SCHEMA = {
             "name": "Images to display in the Virtual Gallery",
             "type": "array",
             "items": {
-               "name": "Image",
-               "type": "object",
-               "properties": {
+                "name": "Image",
+                "type": "object",
+                "properties": {
                     "title": {
                         "type": "string",
                         "required": True,
@@ -26,8 +26,8 @@ GALLERY_DATA_SCHEMA = {
                         "type": "string",
                         "required": True,
                     },
-                }
-            }
+                },
+            },
         },
         "settings": {
             "name": "Virtual Gallery settings",
