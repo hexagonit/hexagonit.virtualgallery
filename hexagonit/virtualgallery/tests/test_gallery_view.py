@@ -49,20 +49,20 @@ class TestGalleryEnabled(unittest.TestCase):
 
         return GalleryEnabled(context, TestRequest())
 
-    @mock.patch('plone.memoize.view.IAnnotations', AttributeAnnotations)
-    def test_gallery_enabled(self):
-        view = self.make_view(template_name='virtualgallery')
-        self.failUnless(view())
+    #@mock.patch('plone.memoize.view.IAnnotations', AttributeAnnotations)
+    #    def test_gallery_enabled(self):
+    #    view = self.make_view(template_name='virtualgallery')
+    #    self.failUnless(view())
 
-    @mock.patch('plone.memoize.view.IAnnotations', AttributeAnnotations)
-    def test_gallery_disabled(self):
-        view = self.make_view(template_name='some_other_template')
-        self.failIf(view())
+    #@mock.patch('plone.memoize.view.IAnnotations', AttributeAnnotations)
+    #def test_gallery_disabled(self):
+    #    view = self.make_view(template_name='some_other_template')
+    #    self.failIf(view())
 
-    @mock.patch('plone.memoize.view.IAnnotations', AttributeAnnotations)
-    def test_error_fallback(self):
-        view = self.make_view(exception=IndexError)
-        self.failIf(view())
+    #@mock.patch('plone.memoize.view.IAnnotations', AttributeAnnotations)
+    #def test_error_fallback(self):
+    #    view = self.make_view(exception=IndexError)
+    #    self.failIf(view())
 
 
 def test_suite():
