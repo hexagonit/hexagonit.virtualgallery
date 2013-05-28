@@ -65,11 +65,11 @@ Set Folder's display view to 'virtualgallery'
     False
 
     Verify that we have the link to display view.
-    >>> browser.getLink(id='virtualgallery').url.endswith("selectViewTemplate?templateId=virtualgallery")
+    >>> browser.getLink(id='plone-contentmenu-display-virtualgallery').url.endswith("selectViewTemplate?templateId=virtualgallery")
     True
 
     Click to set display view.
-    >>> browser.getLink(id='virtualgallery').click()
+    >>> browser.getLink(id='plone-contentmenu-display-virtualgallery').click()
     >>> 'View changed' in browser.contents
     True
 
